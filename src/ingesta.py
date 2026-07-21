@@ -12,8 +12,6 @@ class CargaDatos:
         self.ruta_raw = ruta_raw
         self.ruta_processed = ruta_processed
         self.datos = None
-        os.makedirs(self.ruta_raw, exist_ok=True)
-        os.makedirs(self.ruta_processed, exist_ok=True)
     # Descarga el CSV original
     def descargar_csv(self, destino="data/raw/results.csv", url=None):
         urllib.request.urlretrieve(url or self.URL_CSV, destino)
